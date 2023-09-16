@@ -33,6 +33,12 @@ struct seq_file;
 #define MAX_CGROUP_ROOT_NAMELEN 64
 #define MAX_CFTYPE_NAME		64
 
+#if IS_ENABLED(CONFIG_CGROUP_PIDS)
+enum {
+    pids_cgrp_id,
+};
+#endif
+
 /* define the enumeration of all cgroup subsystems */
 #define SUBSYS(_x) _x ## _cgrp_id,
 enum cgroup_subsys_id {
