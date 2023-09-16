@@ -60,15 +60,6 @@ SUBSYS(net_prio)
 SUBSYS(hugetlb)
 #endif
 
-#ifndef SUBSYS_PIDS_CGRP_ID_DEFINED
-#define SUBSYS_PIDS_CGRP_ID_DEFINED
-
-enum {
-    pids_cgrp_id, 
-};
-
-#endif
-
 #if IS_ENABLED(CONFIG_CGROUP_PIDS)
 SUBSYS(pids)
 #endif
