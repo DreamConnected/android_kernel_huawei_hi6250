@@ -3,8 +3,7 @@
  *
  * DO NOT ADD ANY SUBSYSTEM WITHOUT EXPLICIT ACKS FROM CGROUP MAINTAINERS.
  */
-#ifndef CGROUP_SUBSYS_H
-#define CGROUP_SUBSYS_H
+
 /*
  * This file *must* be included with SUBSYS() defined.
  */
@@ -61,6 +60,15 @@ SUBSYS(net_prio)
 SUBSYS(hugetlb)
 #endif
 
+#ifndef SUBSYS_PIDS_CGRP_ID_DEFINED
+#define SUBSYS_PIDS_CGRP_ID_DEFINED
+
+enum {
+    pids_cgrp_id, 
+};
+
+#endif
+
 #if IS_ENABLED(CONFIG_CGROUP_PIDS)
 SUBSYS(pids)
 #endif
@@ -84,7 +92,6 @@ SUBSYS(iolimit)
 SUBSYS(workingset)
 #endif
 
-#endif 
 /*
  * DO NOT ADD ANY SUBSYSTEM WITHOUT EXPLICIT ACKS FROM CGROUP MAINTAINERS.
  */
