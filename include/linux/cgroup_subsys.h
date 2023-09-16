@@ -3,7 +3,8 @@
  *
  * DO NOT ADD ANY SUBSYSTEM WITHOUT EXPLICIT ACKS FROM CGROUP MAINTAINERS.
  */
-
+#ifndef CGROUP_SUBSYS_H
+#define CGROUP_SUBSYS_H
 /*
  * This file *must* be included with SUBSYS() defined.
  */
@@ -83,6 +84,7 @@ SUBSYS(iolimit)
 SUBSYS(workingset)
 #endif
 
+#endif 
 /*
  * DO NOT ADD ANY SUBSYSTEM WITHOUT EXPLICIT ACKS FROM CGROUP MAINTAINERS.
  */
